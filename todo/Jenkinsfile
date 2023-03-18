@@ -3,21 +3,29 @@ pipeline {
 
     stages {
 
-        stage("Build") {
+        stage("Rustup") {
             steps {
-                echo "Building..."
+                // This should point to a specific version but this way is more chad
+                sh "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs -o rust.sh && chmod a+x rust.sh && ./rust.sh -y && rm rust.sh"
+            }
+        }
+
+        stage("Check Installation") {
+            steps {
+                sh ". $HOME/.cargo/env && cargo --version"
             }
         }
 
         stage("Test") {
             steps {
-                echo "Testing..."
+                sh ". $HOME/.cargo/env && cd todo && cargo test"
             }
         }
 
-        stage("Deploy") {
+        stage("Build") {
             steps {
-                echo "Deploying..."
+                sh ". $HOME/.cargo/env && cd todo && cargo build"
+                archiveArtifacts artifacts: "**/target/**"
             }
         }
 
