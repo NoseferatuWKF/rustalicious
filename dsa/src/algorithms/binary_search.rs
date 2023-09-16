@@ -1,10 +1,8 @@
 pub fn sorted_binary_search(needle: &usize, haystack: &Vec<usize>) -> bool {
-
     let mut low: usize = 0;
     let mut high: usize = haystack.len();
 
     while low < high {
-
         let middle = &low + (&high - &low) / 2;
 
         if haystack[middle].eq(needle) {
@@ -14,14 +12,14 @@ pub fn sorted_binary_search(needle: &usize, haystack: &Vec<usize>) -> bool {
         } else {
             low = middle + 1;
         }
-
     }
+
+    // this looks ugly af
     false
 }
 
 #[cfg(test)]
 mod tests {
-
     use super::sorted_binary_search;
 
     #[test]
@@ -37,5 +35,4 @@ mod tests {
         let not_exists = sorted_binary_search(&3, &haystack);
         assert_eq!(not_exists, false);
     }
-
 }
