@@ -4,6 +4,10 @@ mod data_structures;
 use crate::data_structures::linked_list::LinkedList;
 
 fn main() {
+    linked_list();
+}
+
+fn linked_list() {
     let mut l: LinkedList<u8> = LinkedList::new();
     l.append(5);
     l.append(4);
