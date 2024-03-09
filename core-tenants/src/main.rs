@@ -1,7 +1,8 @@
-mod blanket_implementation;
-mod zero_cost_abstraction;
+// mod blanket_implementation;
+// mod zero_cost_abstraction;
 mod interior_mutability;
+use crate::interior_mutability::example::interior_mutability_example;
 
 fn main() {
-    println!("Hello, world!");
+    interior_mutability_example();
 }
