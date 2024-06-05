@@ -1,16 +1,14 @@
-#[derive(Debug)]
 pub struct Node<T> {
     val: T,
     next: Option<Box<Node<T>>>,
 }
 
-#[derive(Debug)]
 pub struct LinkedList<T> {
     length: usize,
     head: Option<Box<Node<T>>>,
 }
 
-impl<T: std::fmt::Debug + std::cmp::PartialEq> LinkedList<T> {
+impl<T: std::cmp::PartialEq> LinkedList<T> {
     pub fn new() -> Self {
         LinkedList {
             length: 0,
@@ -76,7 +74,7 @@ impl<T: std::fmt::Debug + std::cmp::PartialEq> LinkedList<T> {
         match self.length > index {
             true => {
                 if index == 0 {
-                    let mut curr = self.head.take();
+                    let curr = self.head.take();
                     if let Some(mut node) = curr {
                         if node.next.is_some() {
                             self.head = node.next.take();

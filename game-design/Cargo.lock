@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "game-concepts"
+name = "game-design"
 version = "0.1.0"

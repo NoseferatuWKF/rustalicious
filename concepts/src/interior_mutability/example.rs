@@ -35,7 +35,7 @@ impl<T> DoublyLinkedList<T> {
     }
 }
 
-pub fn interior_mutability_example() {
+pub fn refcell_example() {
     let mut dll: DoublyLinkedList<i32> = DoublyLinkedList::new();
     let mut node: Rc<RefCell<Node<i32>>> = Rc::new(RefCell::new(Node::new(69)));
 
