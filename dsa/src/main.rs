@@ -1,18 +1,18 @@
-// mod algorithms;
-// use crate::algorithms::binary_search::binary_search;
+mod algorithms;
 mod data_structures;
-use crate::data_structures::linked_list::LinkedList;
-use crate::data_structures::lru::{LRU, Operations};
-use crate::data_structures::doubly_linked_list::DoublyLinkedList;
 
 fn main() {
+    use algorithms::binary_search::binary_search;
+    use data_structures::linked_list::LinkedList;
+    use data_structures::lru::{LRU, Operations};
+    use data_structures::doubly_linked_list::DoublyLinkedList;
     // linked_list();
     // lru();
 }
 
-fn doubly_linked_list() {
-    let mut dll: DoublyLinkedList<u32> = DoublyLinkedList::new();
-}
+// fn doubly_linked_list() {
+//     let mut dll: DoublyLinkedList<u32> = DoublyLinkedList::new();
+// }
 
 // fn lru() {
 //     let mut lru: LRU<i32, String> = LRU::new(3);

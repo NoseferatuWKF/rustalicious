@@ -14,11 +14,11 @@ Simple, short, and digestable Rust examples and topics from The Book
 - [ ] Quicksort
 - [ ] BFS
 - [ ] DFS
-- [ ] Djikstra
 
 # Concepts
 
-- [ ] Blanket Implementation
+- [ ] Borrow Checker
+- [ ] Traits
+- [ ] Lifetimes
 - [x] Interior Mutability
 - [x] Zero Cost Abstraction
-

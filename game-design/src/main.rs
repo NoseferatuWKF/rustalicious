@@ -1,11 +1,11 @@
-mod concepts;
+mod rpg;
 
 fn main() {
     atb();
 }
 
 fn atb() {
-    use crate::concepts::rpg::atb::*;
+    use rpg::atb::*;
     use std::collections::HashMap;
 
     let characters = HashMap::from([

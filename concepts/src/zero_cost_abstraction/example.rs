@@ -23,7 +23,9 @@ pub fn polymorphism_example() {
     let car = Car;
     let train = Train;
     println!("{}", dynamic_dispatch(&car));
-    println!("{}", static_dispatch(&train));
+    println!("{}", dynamic_dispatch(&train));
+    println!("{}", static_dispatch(&car));
+    println!("{}", static_dispatch(&car));
 }
 
 // we need to be explicit on whether to do dynamic dispatch...

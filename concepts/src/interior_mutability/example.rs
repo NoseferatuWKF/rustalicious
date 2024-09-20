@@ -47,4 +47,3 @@ pub fn refcell_example() {
 
     dbg!("{}", dll); // value for both nodes is now 420
 }
-
